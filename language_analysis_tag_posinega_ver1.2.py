@@ -30,12 +30,12 @@ def morpheme(text,list):
             fnegascoreline = fnegascore.readline()
 
             while fposiscoreline:
-                if node.surface == fposiscoreline.rstrip("\n"):
+                if node.surface == fposiscoreline.replace(('\r'or'\n\r'or'\r\n'),'\n').rstrip("\n"):
                     score += 1
                 fposiscoreline = fposiscore.readline().replace(('\r'or'\n\r'or'\r\n'),'\n')
 
             while fnegascoreline:
-                if node.surface == fnegascoreline.rstrip("\n"):
+                if node.surface == fnegascoreline.replace(('\r'or'\n\r'or'\r\n'),'\n').rstrip("\n"):
                     score -= 1
                 fnegascoreline = fnegascore.readline().replace(('\r'or'\n\r'or'\r\n'),'\n')
 
@@ -44,7 +44,7 @@ def morpheme(text,list):
             fworktimetagline = fworktimetag.readline()
 
             while fworktimetagline:
-                if node.surface == fworktimetagline.rstrip("\n"):
+                if node.surface == fworktimetagline.replace(('\r'or'\n\r'or'\r\n'),'\n').rstrip("\n"):
                     worktime += 1
                 fworktimetagline = fworktimetag.readline().replace(('\r'or'\n\r'or'\r\n'),'\n')
 
@@ -53,7 +53,7 @@ def morpheme(text,list):
             fmoneyratingtagline = fmoneyratingtag.readline()
 
             while fmoneyratingtagline:
-                if node.surface == fmoneyratingtagline.rstrip("\n"):
+                if node.surface == fmoneyratingtagline.replace(('\r'or'\n\r'or'\r\n'),'\n').rstrip("\n"):
                     moneyrating += 1
                 fmoneyratingtagline = fmoneyratingtag.readline().replace(('\r'or'\n\r'or'\r\n'),'\n')
 
@@ -62,7 +62,7 @@ def morpheme(text,list):
             fcolleaguetagline = fcolleaguetag.readline()
 
             while fcolleaguetagline:
-                if node.surface == fcolleaguetagline.rstrip("\n"):
+                if node.surface == fcolleaguetagline.replace(('\r'or'\n\r'or'\r\n'),'\n').rstrip("\n"):
                     colleague += 1
                 fcolleaguetagline = fcolleaguetag.readline().replace(('\r'or'\n\r'or'\r\n'),'\n')
 
@@ -71,7 +71,7 @@ def morpheme(text,list):
             fjobtagline = fjobtag.readline()
 
             while fjobtagline:
-                if node.surface == fjobtagline.rstrip("\n"):
+                if node.surface == fjobtagline.replace(('\r'or'\n\r'or'\r\n'),'\n').rstrip("\n"):
                     job += 1
                 fjobtagline = fjobtag.readline().replace(('\r'or'\n\r'or'\r\n'),'\n')
 
@@ -80,7 +80,7 @@ def morpheme(text,list):
             fcompanyculturetagline = fcompanyculturetag.readline()
 
             while fcompanyculturetagline:
-                if node.surface == fcompanyculturetagline.rstrip("\n"):
+                if node.surface == fcompanyculturetagline.replace(('\r'or'\n\r'or'\r\n'),'\n').rstrip("\n"):
                     companyculture += 1
                 fcompanyculturetagline = fcompanyculturetag.readline().replace(('\r'or'\n\r'or'\r\n'),'\n')
 
@@ -89,7 +89,7 @@ def morpheme(text,list):
             fsocialtagline = fsocialtag.readline()
 
             while fsocialtagline:
-                if node.surface == fsocialtagline.rstrip("\n"):
+                if node.surface == fsocialtagline.replace(('\r'or'\n\r'or'\r\n'),'\n').rstrip("\n"):
                     social += 1
                 fsocialtagline = fsocialtag.readline().replace(('\r'or'\n\r'or'\r\n'),'\n')
 
@@ -98,7 +98,7 @@ def morpheme(text,list):
             fgrowthtrainingtagline = fgrowthtrainingtag.readline()
 
             while fgrowthtrainingtagline:
-                if node.surface == fgrowthtrainingtagline.rstrip("\n"):
+                if node.surface == fgrowthtrainingtagline.replace(('\r'or'\n\r'or'\r\n'),'\n').rstrip("\n"):
                     growthtraining += 1
                 fgrowthtrainingtagline = fgrowthtrainingtag.readline().replace(('\r'or'\n\r'or'\r\n'),'\n')
 
